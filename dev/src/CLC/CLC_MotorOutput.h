@@ -1,8 +1,8 @@
-#pragma once
+Ôªø#pragma once
 
 extern void calc_motor_power(void);
 
-//PIDêßå‰ÇÃÇΩÇﬂÇÃç\ë¢ëÃ
+// PID control parameters.
 typedef struct _power_t {
     int target;
     int target_prev;
