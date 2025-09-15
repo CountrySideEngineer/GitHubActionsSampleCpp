@@ -3,7 +3,9 @@
  *
  *  this is template file.
  */
- #include "ev3api.h"
+#include "ev3api.h"
+
+CPP_DECL_BEGIN
 
  // Global variables.
 
@@ -62,3 +64,4 @@ int limit_int(int value, int min, int max) {
     return limited_value;
 }
 
+CPP_DECL_END

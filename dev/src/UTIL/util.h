@@ -2,6 +2,8 @@
 
 #include "ev3api.h"
 
+CPP_DECL_BEGIN
+
 extern void init_buff(int size, char *buff, char val);
 extern int limit_int(int value, int min, int max);
 
@@ -20,3 +22,5 @@ extern int limit_int(int value, int min, int max);
  *  The buffer is initialized with all values set to 0.
  */
 #define INIT_BUF(size, buff) INIT_BUF_VAL(size, buff, 0)
+
+CPP_DECL_END
