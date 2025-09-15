@@ -5,6 +5,8 @@
  */
 #include "ev3api.h"
 
+CPP_DECL_BEGIN
+
 // Global variables
 int32_t left_motor_trav_dist;           //Unit:mm LSB:1.0
 int32_t right_motor_trav_dist;          //Unit:mm LSB:1.0
@@ -92,3 +94,5 @@ void init_motor_distance(void) {
     left_motor_count_prev = 0;
     right_motor_count_prev = 0;
 }
+
+CPP_DECL_END

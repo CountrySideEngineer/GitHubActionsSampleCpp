@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+CPP_DECL_BEGIN
+
 extern void calc_motor_power(void);
 
 // PID control parameters.
@@ -13,3 +15,4 @@ typedef struct _power_t {
     int reset_count;
 } power_t;
 
+CPP_DECL_END

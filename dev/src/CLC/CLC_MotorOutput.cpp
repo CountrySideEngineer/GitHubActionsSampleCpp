@@ -7,6 +7,8 @@
 #include "util.h"
 #include "CLC_MotorOutput.h"
 
+CPP_DECL_BEGIN
+
 #define MOTOR_POWER_MIN                 (-45)
 #define MOTOR_POWER_MAX                 (45)
 
@@ -138,3 +140,5 @@ static int pid_control(power_t *power) {
 
     return pid;
 }
+
+CPP_DECL_END

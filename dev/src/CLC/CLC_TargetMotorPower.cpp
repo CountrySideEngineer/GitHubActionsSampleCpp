@@ -6,6 +6,8 @@
 #include "ev3api.h"
 #include "util.h"
 
+CPP_DECL_BEGIN
+
 #define TARGET_MOTOR_OUTPUT_MAX     (45)
 #define TARGET_MOTOR_OUTPUT_MIN     (-45)
 
@@ -79,3 +81,5 @@ void init_target_motor_outputLR(void)
     target_motor_output_left = 0;
     target_motor_output_right = 0;
 }
+
+CPP_DECL_END

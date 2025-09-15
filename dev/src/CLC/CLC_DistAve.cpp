@@ -7,6 +7,8 @@
  */
 #include "ev3api.h"
 
+CPP_DECL_BEGIN
+
 #define DISTANCE_AVERAGE_BUF_SIZE   (3)
 
 // Global variables.
@@ -59,3 +61,4 @@ void init_distance_average(void) {
     }
     distance_average_value = 0;
 }
+CPP_DECL_END

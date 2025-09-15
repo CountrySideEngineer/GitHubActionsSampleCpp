@@ -5,6 +5,8 @@
  */
 #include "ev3api.h"
 
+CPP_DECL_BEGIN
+
 // Global variables
 int16_t left_speed;
 int16_t right_speed;
@@ -69,3 +71,5 @@ void init_travel_speed(void) {
     left_motor_trav_dist_hi_acc_prev = 0;
     right_motor_trav_dist_hi_acc_prev = 0;
 }
+
+CPP_DECL_END

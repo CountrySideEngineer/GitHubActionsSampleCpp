@@ -6,6 +6,8 @@
  */
 #include "ev3api.h"
 
+CPP_DECL_BEGIN
+
 // Global variables
 int left_motor_power_hys;
 int right_motor_power_hys;
@@ -67,3 +69,5 @@ void init_motor_hysteresis(void) {
     left_motor_power_hys = 0;
     right_motor_power_hys = 0;
 }
+
+CPP_DECL_END
