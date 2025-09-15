@@ -1,4 +1,4 @@
-/**
+﻿/**
  *  dist_remove_noise
  *
  *  Remove noise from ultrasoni sensor valus. To do so, a distance used to
