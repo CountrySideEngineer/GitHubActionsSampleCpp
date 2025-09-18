@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(UTEST_util_init_buff)
+project(UTEST_util)
 
 # テスト対象コード、およびテストコードのルートディレクトリのパス
 set(SRC_ROOT_DIR ${CMAKE_SOURCE_DIR}/../../../src)
@@ -23,6 +23,7 @@ message(STATUS "TEST_DIR = ${TEST_DIR}")
 set(TEST_SRC
 	${SRC_ROOT_DIR}/UTIL/util.cpp
 	${TEST_DIR}/UTEST_util_init_buff.cpp
+	${TEST_DIR}/UTEST_util_limit_int.cpp
 )
 
 message(STATUS "TEST_SRC = ${TEST_SRC}")
@@ -36,7 +37,7 @@ set(GTEST_LIBS
 )
 
 # テスト実行ファイル生成
-add_executable(utest_util_init_buff ${TEST_SRC})
+add_executable(UTEST_util ${TEST_SRC})
 
 # インクルードディレクトリ
 include_directories(
@@ -49,10 +50,10 @@ include_directories(
 set(CMAKE_BUILD_TYPE Debug)
 
 # リンク
-target_link_libraries(utest_util_init_buff ${GTEST_LIBS} pthread)
+target_link_libraries(UTEST_util ${GTEST_LIBS} pthread)
 
 message(STATUS "COMMAND = ${COMMAND}")
 
 # テスト追加
 enable_testing()
-add_test(NAME util_init_buff_test COMMAND utest_util_init_buff)
+add_test(NAME util_init_buff_test COMMAND UTEST_util)
