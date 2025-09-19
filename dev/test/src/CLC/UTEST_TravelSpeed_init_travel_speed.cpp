@@ -52,3 +52,39 @@ TEST(UTEST_TravelSpeed_init_travel_speed, 002)
 	EXPECT_EQ(0, left_motor_trav_dist_hi_acc_prev);
 	EXPECT_EQ(0, right_motor_trav_dist_hi_acc_prev);
 }	
+
+TEST(UTEST_TravelSpeed_init_travel_speed, 003)
+{
+	// 事前条件
+	left_speed = 0x7FFF;
+	right_speed = 0x7FFF;
+	left_motor_trav_dist_hi_acc_prev = 0x7FFFFFFF;
+	right_motor_trav_dist_hi_acc_prev = 0x7FFFFFFF;
+
+	// テスト実行
+	init_travel_speed();
+
+	// 判定
+	EXPECT_EQ(0, left_speed);
+	EXPECT_EQ(0, right_speed);
+	EXPECT_EQ(0, left_motor_trav_dist_hi_acc_prev);
+	EXPECT_EQ(0, right_motor_trav_dist_hi_acc_prev);
+}	
+
+TEST(UTEST_TravelSpeed_init_travel_speed, 004)
+{
+	// 事前条件
+	left_speed = 0x8000;
+	right_speed = 0x8000;
+	left_motor_trav_dist_hi_acc_prev = 0x80000000;
+	right_motor_trav_dist_hi_acc_prev = 0x80000000;
+
+	// テスト実行
+	init_travel_speed();
+
+	// 判定
+	EXPECT_EQ(0, left_speed);
+	EXPECT_EQ(0, right_speed);
+	EXPECT_EQ(0, left_motor_trav_dist_hi_acc_prev);
+	EXPECT_EQ(0, right_motor_trav_dist_hi_acc_prev);
+}	
