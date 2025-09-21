@@ -80,5 +80,3 @@ message(STATUS "COMMAND = ${COMMAND}")
 
 # テスト追加
 enable_testing()
-# add_test(NAME util_init_buff_test COMMAND UTEST_util)
-# add_test(NAME util_limit_int_test COMMAND UTEST_util)
