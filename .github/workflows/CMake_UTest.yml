@@ -22,5 +22,11 @@ jobs:
     - name: Build
       run: cmake --build dev/test/src/build
 
-    - name: Run tests
+    - name: Run tests (build root)
       run: cd dev/test/src/build && ctest --output-on-failure
+
+    - name: Run tests (UTIL)
+      run: cd dev/test/src/build/UTIL && ctest --output-on-failure
+
+    - name: Run tests (CLC)
+      run: cd dev/test/src/build/CLC && ctest --output-on-failure
