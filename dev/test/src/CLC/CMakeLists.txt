@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(UTEST_TravelSpeed)
 
+include(GoogleTest)
+
 # テスト対象コードのルートディレクトリのパスの設定
 if(DEFINED SRC_ROOT_DIR)
 	message(STATUS "SRC_ROOT_DIR is defined: ${SRC_ROOT_DIR}")
@@ -79,9 +81,4 @@ message(STATUS "COMMAND = ${COMMAND}")
 
 # テスト追加
 enable_testing()
-add_test(
-	NAME 
-	UTEST_TravelSpeed 
-	COMMAND 
-	UTEST_TravelSpeed
-	)
+gtest_add_tests(TARGET UTEST_TravelSpeed)
