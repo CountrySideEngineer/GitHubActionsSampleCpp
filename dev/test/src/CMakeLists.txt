@@ -27,3 +27,4 @@ set(TEST_FRAMEWORK_LIB_FILES
 
 # add_subdirectory(CLC)
 add_subdirectory(UTIL)
+add_subdirectory(CLC)
