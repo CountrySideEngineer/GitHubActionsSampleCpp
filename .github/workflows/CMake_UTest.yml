@@ -27,8 +27,8 @@ jobs:
 
     - name: Run tests (UTIL)
       working-directory: dev/test/src/build/UTIL
-      run: UTEST_util --gtest_output=xml:utest_util_results.xml
+      run: ./UTEST_util --gtest_output=xml:utest_util_results.xml
 
     - name: Run tests (CLC)
       working-directory: dev/test/src/build/CLC
-      run: UTEST_TravelSpeed --gtest_output=xml:utest_util_results.xml
+      run: ./UTEST_TravelSpeed --gtest_output=xml:utest_util_results.xml
