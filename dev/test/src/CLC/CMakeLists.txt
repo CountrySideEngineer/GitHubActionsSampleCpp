@@ -79,3 +79,9 @@ message(STATUS "COMMAND = ${COMMAND}")
 
 # テスト追加
 enable_testing()
+add_test(
+	NAME 
+	UTEST_TravelSpeed 
+	COMMAND 
+	UTEST_TravelSpeed
+	)
