@@ -26,9 +26,9 @@ jobs:
       run: cd dev/test/src/build && ctest --output-on-failure
 
     - name: Run tests (UTIL)
-      workiubg-directory: dev/test/src/build/UTIL
+      working-directory: dev/test/src/build/UTIL
       run: UTEST_util --gtest_output=xml:utest_util_results.xml
 
     - name: Run tests (CLC)
-      workiubg-directory: dev/test/src/build/CLC
+      working-directory: dev/test/src/build/CLC
       run: UTEST_TravelSpeed --gtest_output=xml:utest_util_results.xml
