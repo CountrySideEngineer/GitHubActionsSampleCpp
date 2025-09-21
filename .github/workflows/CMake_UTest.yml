@@ -1,0 +1,26 @@
+name: CMake Unit Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y cmake g++ make
+
+    - name: Configure
+      run: cmake -S dev/test/src -B dev/test/src/build
+
+    - name: Build
+      run: cmake --build dev/test/src/build
+
+    - name: Run tests
+      run: cd dev/test/src/build && ctest --output-on-failure
