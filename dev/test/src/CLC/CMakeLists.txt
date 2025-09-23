@@ -57,6 +57,7 @@ endif()
 set(TEST_SRC
 	${SRC_ROOT_DIR}/CLC/CLC_TravelSpeed.cpp
 	${TEST_SRC_DIR}/CLC/UTEST_TravelSpeed_init_travel_speed.cpp
+	${TEST_SRC_DIR}/CLC/UTEST_TravelSpeed_calc_travel_speed.cpp
 )
 
 message(STATUS "TEST_SRC : ${TEST_SRC}")
